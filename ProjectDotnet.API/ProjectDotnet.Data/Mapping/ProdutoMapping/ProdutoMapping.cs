@@ -23,9 +23,9 @@ namespace ProjectDotnet.Data.Mapping.ProdutoMapping
             builder
                 .HasData
                 (
-                    new Produto { Id = 1, Categoria = Domain.Enums.CategoriaEnum.TV, Valor = 1.500m, Descricao = "Smart TV LED 45 Samsung" },
-                    new Produto { Id = 1, Categoria = Domain.Enums.CategoriaEnum.Eletrodomestico, Valor = 1.500m, Descricao = "Sanduicheira Grill 750W" },
-                    new Produto { Id = 1, Categoria = Domain.Enums.CategoriaEnum.Celulares, Valor = 1.500m, Descricao = "Smartphone Samsung Galaxy A34 128GB Preto" }
+                    new Produto { Id = 1, Categoria = Domain.Enums.CategoriaEnum.TV, Valor = 1500m, Descricao = "Smart TV LED 45 Samsung" },
+                    new Produto { Id = 2, Categoria = Domain.Enums.CategoriaEnum.Eletrodomestico, Valor = 100m, Descricao = "Sanduicheira Grill 750W" },
+                    new Produto { Id = 3, Categoria = Domain.Enums.CategoriaEnum.Celulares, Valor = 1000m, Descricao = "Smartphone Samsung Galaxy A34 128GB Preto" }
                 );
         }
     }
