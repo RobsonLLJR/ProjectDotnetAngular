@@ -4,19 +4,10 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDotnet.Core", "ProjectDotnet.Core\ProjectDotnet.Core.csproj", "{D29FC761-0E43-4F19-8BB7-D95FAA6D38F0}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F8F86AF5-CF4A-48D0-A6D5-3312A871279D} = {F8F86AF5-CF4A-48D0-A6D5-3312A871279D}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDotnet.Application", "ProjectDotnet.Application\ProjectDotnet.Application.csproj", "{F8F86AF5-CF4A-48D0-A6D5-3312A871279D}"
-	ProjectSection(ProjectDependencies) = postProject
-		{D10B6AB0-3E20-4095-9616-A9E09192AA6C} = {D10B6AB0-3E20-4095-9616-A9E09192AA6C}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDotnet.Data", "ProjectDotnet.Data\ProjectDotnet.Data.csproj", "{D10B6AB0-3E20-4095-9616-A9E09192AA6C}"
-	ProjectSection(ProjectDependencies) = postProject
-		{79C70910-3804-4A66-9995-C0941028F6BC} = {79C70910-3804-4A66-9995-C0941028F6BC}
-	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDotnet.Domain", "ProjectDotnet.Domain\ProjectDotnet.Domain.csproj", "{79C70910-3804-4A66-9995-C0941028F6BC}"
 EndProject
