@@ -3,7 +3,6 @@ import { Routes } from '@angular/router';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { ProdutoListComponent } from './features/produto/produto-list/produto-list.component';
 import { HttpClient } from '@angular/common/http';
-
 NgModule({
     declarations: [NavbarComponent],
     imports:[
@@ -13,7 +12,7 @@ NgModule({
 
 export const routes: Routes = [
     {
-        path: 'admin/produtos',
+        path: 'produtos',
         component: ProdutoListComponent
     }
 ];
