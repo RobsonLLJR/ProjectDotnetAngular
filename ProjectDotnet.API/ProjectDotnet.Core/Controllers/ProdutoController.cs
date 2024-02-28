@@ -15,7 +15,7 @@ namespace ProjectDotnet.Core.Controllers
         [HttpGet("Get")]
         public IEnumerable<Produto> Get() => _produtoService.GetAll();
         [HttpPost]
-        public async Task<IActionResult> AddProduto(AddProdutoDto addProdutoDto)
+        public async Task<IActionResult> AddProduto([FromForm] AddProdutoDto addProdutoDto)
         {
             ServiceResponse<AddProdutoDto> serviceResponse = await _produtoService.Add(addProdutoDto);
             if (serviceResponse.Success is false)
