@@ -4,6 +4,8 @@ using ProjectDotnet.Domain.Entities;
 
 namespace ProjectDotnet.Core.Controllers
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class ProdutoController(IProdutoService produtoService) : ControllerBase
     {
         private readonly IProdutoService _produtoService = produtoService;

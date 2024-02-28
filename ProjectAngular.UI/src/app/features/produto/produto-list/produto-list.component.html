@@ -1,0 +1,24 @@
+@if(produtoList && produtoList.length > 0){
+    <table class="table table-striped" dataSource="produtoList">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Valor (R$)</th>
+            <th scope="col">Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+            @for (item of produtoList; track $index) 
+            {
+                <tr>
+                    <td>{{item.id}}</td>
+                    <td>{{item.categoria}}</td>
+                    <td>{{item.valor}}</td>
+                    <td>{{item.descricao}}</td>
+                </tr>
+            }
+        </tbody>
+      </table>
+}
+
