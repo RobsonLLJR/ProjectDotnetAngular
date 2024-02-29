@@ -2,17 +2,20 @@
   <div class="x_title">
     <h2 class="mt-3">Novo Produto</h2>
   </div>
-  <form class="col-sm-12 col-md-8 col-lg-6">
+  <form [formGroup]="produto" (ngSubmit)="onFormSubmit()" class="col-sm-12 col-md-8 col-lg-6">
     <div class="m-2">
       <div class="mt-3">
         <label class="form-label">Categoria</label>
         <select
           class="form-select"
-          id="{{model.categoria}}"
+          id="categoria"
+          name="categoria"
+          matInput
+          formControlName="categoria"
           aria-placeholder="Selecione uma opção"
           required
         >
-        <option selected>Selecione uma opção</option>
+        <option selected value="">Selecione uma opção</option>
           @for (item of categoriaSelected; track $index) {
           <option value="{{ item.value }}">{{ item.label }}</option>
           }
@@ -22,7 +25,10 @@
         <label class="form-label">Descrição</label>
         <input
           type="text"
-          id="{{model.descricao}}"
+          id="descricao"
+          name="descricao"
+          matInput
+          formControlName="descricao"
           class="form-control"
           required
         />
@@ -31,14 +37,17 @@
         <label class="form-label">Valor (R$)</label>
         <input
           type="text"
-          id="{{model.valor}}"
+          id="valor"
+          name="valor"
+          matInput
+          formControlName="valor"
           class="form-control"
           required
           (keydown)="validateDecimal($event)"
         />
       </div>
       <div class="mt-3">
-        <button type="button" (click)="onFormSubmit()" class="btn btn-success">
+        <button type="submit" [disabled]="!produto.valid" class="btn btn-success">
           <i class="bi bi-plus-circle"></i>
           Adicionar
         </button>

@@ -5,12 +5,16 @@ import { ProdutoListComponent } from './features/produto/produto-list/produto-li
 import { HttpClient } from '@angular/common/http';
 import { AddProdutoComponent } from './features/produto/add-produto/add-produto.component';
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
 NgModule({
-    declarations: [NavbarComponent],
+    declarations: [AppComponent, NavbarComponent],
     imports:[
+        BrowserModule,
         HttpClient,
         FormsModule
-    ]
+    ],
+    bootstrap: [AppComponent]
 })
 
 export const routes: Routes = [

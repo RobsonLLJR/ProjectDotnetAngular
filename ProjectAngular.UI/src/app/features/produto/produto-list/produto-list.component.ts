@@ -14,7 +14,6 @@ export class ProdutoListComponent {
   ngOnInit(){
     this.produtoService.getAllProdutos().subscribe(result => {
       this.produtoList = result;
-      console.log(this.produtoList);
     })
   }
 }

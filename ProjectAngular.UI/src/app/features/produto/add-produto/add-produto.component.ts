@@ -1,25 +1,36 @@
 import { Component, inject } from '@angular/core';
-import { AddProdutoRequest } from '../models/add-produto-request.model';
 import { ProdutoService } from '../services/produto.service';
+import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AddProdutoRequest } from '../models/add-produto-request.model';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-produto',
   standalone: true,
-  imports: [],
+  imports: [FormsModule, ReactiveFormsModule],
   templateUrl: './add-produto.component.html',
   styleUrl: './add-produto.component.css'
 })
 export class AddProdutoComponent {
   produtoService=inject(ProdutoService);
-  model: AddProdutoRequest;
-  constructor(){
-    this.model = {
-      categoria: '',
-      descricao: '',
-      valor: 0
-    };
-  }
+  router=inject(Router);
+  formBuilder=inject(FormBuilder);
+  produto = this.formBuilder.group({
+    categoria: ['', Validators.required],
+    descricao: ['', [Validators.required]],
+    valor: ['', [Validators.required]]
+  });
+  constructor(){ }
+
   onFormSubmit(){
-    console.log(this.model);
+    const addProduto :AddProdutoRequest={
+      categoria: this.produto.value.categoria!,
+      descricao: this.produto.value.descricao!,
+      valor: this.produto.value.valor!
+    }
+    this.produtoService.addProduto(addProduto).subscribe(() =>{
+      console.log("Sucesso");
+      this.router.navigateByUrl("/produtos");
+    });
   }
 
 
